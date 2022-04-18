@@ -49,10 +49,37 @@ namespace Final.Controllers
             }
         }
 
+        //SHOW quote details
         public IActionResult QuoteDetails(int quoteid)
         {
             Quote q = _repo.GetQuote(quoteid);
             return View(q);
+        }
+
+        // EDIT Quote
+        [HttpGet]
+        public IActionResult EditQuote(int quoteid)
+        {
+            var quote = _repo.GetQuote(quoteid);
+
+            return View("QuoteForm", quote);
+        }
+
+        [HttpPost]
+        public IActionResult EditQuote(Quote q)
+        {
+            _repo.EditQuote(q);
+
+            return RedirectToAction("Index");
+        }
+
+
+        // DELETE Quote
+        public IActionResult DeleteQuote(int quoteid)
+        {
+            _repo.DeleteQuote(quoteid);
+
+            return RedirectToAction("Index");
         }
     }
 }
