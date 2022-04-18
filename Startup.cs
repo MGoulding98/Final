@@ -31,6 +31,8 @@ namespace Final
             {
                 options.UseSqlite(Configuration["ConnectionStrings:QuoteConnection"]);
             });
+
+            services.AddScoped<IQuotesRepository, EFQuotesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
