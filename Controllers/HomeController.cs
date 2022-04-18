@@ -48,5 +48,11 @@ namespace Final.Controllers
                 return View(q);
             }
         }
+
+        public IActionResult QuoteDetails(int quoteid)
+        {
+            Quote q = _repo.GetQuote(quoteid);
+            return View(q);
+        }
     }
 }

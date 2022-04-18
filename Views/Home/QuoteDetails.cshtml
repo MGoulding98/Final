@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Quote Details";
+}
+
+@model Quote
+
+
+<h2>Quote Details</h2>
+
+<h6 class="font-weight-bold">Quote:</h6>
+<div>@Model.QuoteText</div>
+
+<h6 class="font-weight-bold">Quote:</h6>
+<div>@Model.Author</div>
+
+<h6 class="font-weight-bold">Quote:</h6>
+<div>@Model.Date</div>
+
+<h6 class="font-weight-bold">Quote:</h6>
+<div>@Model.Subject</div>
+
+<h6 class="font-weight-bold">Quote:</h6>
+<div>@Model.Citation</div>
+
+<a class="btn btn-info btn-sm" asp-controller="Home" asp-action="EditQuote" asp-route-quoteid="@Model.QuoteID"> Edit </a>
+<a class="btn btn-danger btn-sm" asp-controller="Home" asp-action="DeleteQuote" asp-route-quoteid="@Model.QuoteID">Delete</a>
+
+<br /><br />
+<div class="d-flex justify-content-center"><a class="btn btn-secondary" asp-controller="Home" asp-action="Index">Back</a></div>

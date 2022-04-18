@@ -15,6 +15,13 @@ namespace Final.Models
         }
         public IQueryable<Quote> Quotes => _context.Quotes;
 
+
+        public Quote GetQuote(int quoteid)
+        {
+            var quote = _context.Quotes.Single(x => x.QuoteID == quoteid);
+            return quote;
+        }
+
         public void SaveQuote(Quote q)
         {
             _context.SaveChanges();

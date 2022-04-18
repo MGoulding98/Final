@@ -20,12 +20,9 @@
             <tr>
                 <td>@q.Author</td>
                 <td>@q.QuoteText</td>
-                @*<td>
-                    <a class="btn btn-info btn-sml" asp-controller="Home" asp-action="EditBowler" asp-route-bowlerid="@b.BowlerID">Edit</a>
-                </td>
                 <td>
-                    <a class="btn btn-danger btn-sm" asp-controller="Home" asp-action="DeleteBowler" asp-route-bowlerid="@b.BowlerID">Delete</a>
-                </td>*@
+                    <a class="btn btn-info btn-sml" asp-controller="Home" asp-action="QuoteDetails" asp-route-quoteid="@q.QuoteID">Details</a>
+                </td>
             </tr>
         }
     </tbody>

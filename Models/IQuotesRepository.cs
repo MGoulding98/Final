@@ -9,6 +9,7 @@ namespace Final.Models
     {
         IQueryable<Quote> Quotes { get; }
 
+        public Quote GetQuote(int quoteid);
         public void SaveQuote(Quote q);
         public void CreateQuote(Quote q);
         public void EditQuote(Quote q);
